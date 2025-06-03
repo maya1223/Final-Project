@@ -107,8 +107,8 @@ nav a:hover {
 
 /* Battery cards container */
 .battery-container {
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-direction: column;
   gap: 1.5rem;
   padding: 2rem;
   margin-top: 20px;
