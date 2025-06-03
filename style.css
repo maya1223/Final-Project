@@ -162,6 +162,58 @@ footer {
   color: white;
   margin-top: 30px;
 }
+/* Mobile-specific adjustments (max-width: 600px) */
+@media (max-width: 600px) {
+  body {
+    padding: 0 1rem;
+  }
+
+  .top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  nav a {
+    padding: 10px;
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  .intro {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .intro img {
+    width: 100%;
+    height: auto;
+    max-height: none;
+  }
+
+  .battery-container {
+    grid-template-columns: 1fr;
+    padding: 1rem 0;
+  }
+
+  .card {
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .intro p {
+    font-size: 15px;
+  }
+}
 
 /* Responsive grid for cards */
 @media (min-width: 600px) {
