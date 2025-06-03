@@ -93,7 +93,7 @@ nav a:hover {
 
 /* Image with floating animation */
 .intro img {
-  max-height: 350px;
+  max-height: 22rem;
   border-radius: 10px;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
   animation: float 3s ease-in-out infinite; /*float effect */
@@ -123,7 +123,7 @@ nav a:hover {
   cursor: pointer;
   position: relative;
   overflow: hidden; /* Prevent growing beyond */
-  max-height: 100px;
+  max-height: 6.25rem;
 }
 .card.active {
   transform: translateY(10px);
