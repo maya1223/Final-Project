@@ -4,12 +4,7 @@
   padding: 0;
   box-sizing: border-box;
 }
-html, body{
-  height: 100%;
-}
-header, main{
-  flex: 1
-}
+
 /* Base body styling */
 body {
   display: flex;
@@ -22,7 +17,7 @@ body {
   opacity: 0;
   min-height: 100vh;
 }
-header 
+
 /* Slide in from top animation */
 @keyframes slideFade {
   from {
@@ -176,7 +171,7 @@ footer {
   padding: 1rem;
   background: #000000;
   color: white;
-  margin-top: 30px;
+  margin-top: auto;
 }
 
 /* Responsive grid for cards */
@@ -190,4 +185,31 @@ footer {
   .battery-container {
     grid-template-columns: repeat(3, 1fr);
   }
+}
+
+/* Fix for .intro on small screens - keep paragraph next to image */
+@media (max-width: 599px) {
+  .intro {
+    flex-wrap: nowrap;       /* prevent wrapping */
+    justify-content: center; /* center horizontally */
+  }
+  
+  .intro p {
+    flex: 0 0 55%;   /* fixed width so it fits next to image */
+    max-width: 55%;
+  }
+  
+  .intro img {
+    flex: 0 0 40%;   /* fixed width to fit side-by-side */
+    max-width: 40%;
+  }
+}
+
+/* Make main grow to push footer to bottom */
+main {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 1rem;
 }
