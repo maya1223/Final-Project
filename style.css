@@ -164,7 +164,7 @@ footer {
 }
 
 /* Responsive grid for cards */
-@media (min-width: 600px) {
+@media (min-width: 700px) {
   .battery-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
