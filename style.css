@@ -81,18 +81,25 @@ nav a:hover {
 }
 
 /* Layout for intro section */
-.intro {
-  display: flex;
-  gap: 3rem;
-  margin-top: 30px;
-}
+  .intro {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+  }
 
+  .intro img {
+    max-width: 100%;
+    height: auto;
+  }
 .intro p {
   font-size: 16px;
 }
 
 /* Image with floating animation */
 .intro img {
+  max-width: 100%;
+  height: auto;
   max-height: 350px;
   border-radius: 10px;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
