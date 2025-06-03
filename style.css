@@ -82,7 +82,7 @@ nav a:hover {
 /* Layout for intro section */
 .intro {
   display: flex;
-  gap: 50px;
+  gap: 3rem;
   margin-top: 30px;
 }
 
@@ -164,16 +164,17 @@ footer {
 }
 
 /* Responsive grid for cards */
-@media (min-width: 700px) {
+/* Responsive grid for cards */
+@media (min-width: 768px) {
   .battery-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (min-width: 900px) {
+@media (min-width: 1224px) {
   .battery-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
   }
-}
+
