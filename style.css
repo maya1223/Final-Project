@@ -213,6 +213,9 @@ footer {
   .intro p {
     font-size: 15px;
   }
+  footer{
+    margin-top:3rem;
+  }
 }
 
 /* Responsive grid for cards */
