@@ -2,6 +2,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 /* Base body styling */
@@ -12,16 +13,9 @@ body {
   background-color: #f5faff;
   color: #333;
   line-height: 1.6;
-  animation: slideFade 1s ease forwards; /*Fade-in animation */
-  opacity: 0; /* required for animation to work */
-}
-
-/* Header styling with entrance animation */
-header {
-  padding: 30px;
-  background-color: #ffffff;
-  margin-bottom: 30px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  animation: slideFade 1s ease forwards;
+  opacity: 0;
+  min-height: 100vh;
 }
 
 /* Slide in from top animation */
@@ -36,22 +30,30 @@ header {
   }
 }
 
+/* Header styling */
+header {
+  padding: 30px;
+  background-color: #ffffff;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
 .top {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap:wrap;
+  flex-wrap: wrap;
 }
 
-/* Header title with hover interaction */
 h1 {
   font-size: 2rem;
   color: #004080;
-  transition: all 0.3s ease; /* smooth effect */
+  transition: all 0.3s ease;
 }
+
 h1:hover {
-  color: #ffa500; /* change color on hover */
-  transform: translateY(-8px); /* scale up slightly on hover */
+  color: #ffa500;
+  transform: translateY(-8px);
 }
 
 nav ul {
@@ -68,7 +70,7 @@ nav a {
   display: flex;
   align-items: center;
   gap: 10px;
-  transition: all 0.3s ease; /*smoother hover */
+  transition: all 0.3s ease;
 }
 
 nav a:hover {
@@ -76,29 +78,37 @@ nav a:hover {
   color: #fff;
   border-radius: 6px;
   padding: 8px 12px;
-  transform: scale(1.02); /* lift effect on hover */
+  transform: scale(1.02);
 }
 
-/* Layout for intro section */
+/* Intro section */
 .intro {
   display: flex;
-  gap: 50px;
+  flex-direction: row;
+  gap: 20px;
   margin-top: 30px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0 10px;
 }
 
 .intro p {
   font-size: 16px;
+  flex: 1 1 300px;
+  max-width: 500px;
 }
 
-/* Image with floating animation */
 .intro img {
-  max-height: 350px;
+  flex: 1 1 200px;
+  max-width: 100%;
+  height: auto;
   border-radius: 10px;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
-  animation: float 3s ease-in-out infinite; /*float effect */
+  animation: float 3s ease-in-out infinite;
 }
 
-/* Keyframes for image floating animation */
+/* Floating animation */
 @keyframes float {
   0% { transform: translateY(0px); }
   50% { transform: translateY(-10px); }
@@ -123,16 +133,17 @@ nav a:hover {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
   position: relative;
-  overflow: hidden; /* Prevent growing beyond */
+  overflow: hidden;
   max-height: 100px;
+  background-color: #fff;
 }
 .card.active {
   transform: translateY(10px);
   box-shadow: 0 8px 12px rgba(0,0,0,0.2);
-  max-height: 200px; /* Enough space to reveal description */
+  max-height: 200px;
 }
 .card:hover {
-  transform: scale(1.05); /* subtle pop effect */
+  transform: scale(1.05);
 }
 
 .card h3 {
@@ -145,13 +156,13 @@ nav a:hover {
   transition: opacity 0.3s ease;
   margin-top: 0.5rem;
 }
-/* Show description when active */
 .card.active .description {
-opacity: 1;
+  opacity: 1;
 }
+
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(5px); }
-    to { opacity: 1; transform: translateY(0); }
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 /* Footer styling */
@@ -160,75 +171,18 @@ footer {
   padding: 1rem;
   background: #000000;
   color: white;
-  margin-top: 30px;
-}
-/* Mobile-specific adjustments (max-width: 600px) */
-@media (max-width: 600px) {
-  body {
-    padding: 0 1rem;
-  }
-
-  .top {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
-  }
-
-  nav ul {
-    flex-direction: column;
-    gap: 10px;
-    width: 100%;
-  }
-
-  nav a {
-    padding: 10px;
-    justify-content: flex-start;
-    width: 100%;
-  }
-
-  .intro {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .intro img {
-    width: 100%;
-    height: auto;
-    max-height: none;
-  }
-
-  .battery-container {
-    grid-template-columns: 1fr;
-    padding: 1rem 0;
-  }
-
-  .card {
-    padding: 1rem;
-  }
-
-  h1 {
-    font-size: 1.5rem;
-  }
-
-  .intro p {
-    font-size: 15px;
-  }
-  footer{
-    margin-top:3rem;
-  }
+  margin-top: auto;
 }
 
 /* Responsive grid for cards */
 @media (min-width: 600px) {
   .battery-container {
-    display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (min-width: 900px) {
   .battery-container {
-    display: grid;
     grid-template-columns: repeat(3, 1fr);
   }
 }
