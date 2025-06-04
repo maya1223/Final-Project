@@ -22,31 +22,40 @@ const batteries = [
     {
         name: "Ultracapacitors",
         color: "#f4f4f4",
-        features: "Ultracapacitors	Very high power density, low energy"
+        features: "Very high power density, low energy"
     },
     {
         name: "Lithium Iron Phosphate",
         color: "#ffe5e0",
         features: "Thermal stability, safe chemistry"
     }
-]
-const container = document.getElementById("battery-container")
-batteries.forEach(battery=>{
-    const card = document.createElement("div")
-    card.className = 'card'
-    card.style.backgroundColor = battery.color
+];
 
-    const title = document.createElement('h3')
-    title.textContent = battery.name
+const container = document.getElementById("battery-container");
+batteries.forEach(battery => {
+    const card = document.createElement("div");
+    card.className = 'card';
+    card.style.backgroundColor = battery.color;
 
-    const description = document.createElement("p")
-    description.className = 'description'
-    description.textContent = battery.features
+    const title = document.createElement('h3');
+    title.textContent = battery.name;
 
-    card.appendChild(title)
-    card.appendChild(description)
-    container.appendChild(card)
-     card.addEventListener("click", () => {
-    card.classList.toggle("active");
-  })
-})
+    const description = document.createElement("p");
+    description.className = 'description';
+    description.textContent = battery.features;
+
+    card.appendChild(title);
+    card.appendChild(description);
+    container.appendChild(card);
+
+    card.addEventListener("click", () => {
+        card.classList.toggle("active");
+    });
+});
+
+// Mobile menu toggle functionality
+const menuToggle = document.querySelector('.menu-toggle');
+const nav = document.querySelector('nav');
+menuToggle.addEventListener('click', () => {
+    nav.classList.toggle('active');
+});
