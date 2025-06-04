@@ -1,0 +1,254 @@
+/* Reset default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Base body styling */
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f5faff;
+  color: #333;
+  line-height: 1.6;
+  animation: slideFade 1s ease forwards; /*Fade-in animation */
+  opacity: 0; /* required for animation to work */
+}
+
+/* Header styling with entrance animation */
+header {
+  padding: 30px;
+  background-color: #ffffff;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Slide in from top animation */
+@keyframes slideFade {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap:wrap;
+}
+
+/* Header title with hover interaction */
+h1 {
+  font-size: 2rem;
+  color: #004080;
+  transition: all 0.3s ease; /* smooth effect */
+}
+h1:hover {
+  color: #ffa500; /* change color on hover */
+  transform: translateY(-8px); /* scale up slightly on hover */
+}
+button {
+  background-color: #1976D2;
+  color: #FFFFFF;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: orange;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  text-decoration: none;
+  color: #004080;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease; /*smoother hover */
+}
+
+nav a:hover {
+  background-color: #ffa500;
+  color: #fff;
+  border-radius: 6px;
+  padding: 8px 12px;
+  transform: scale(1.02); /* lift effect on hover */
+}
+
+/* Layout for intro section */
+.intro {
+  display: flex;
+  gap: 50px;
+  margin-top: 30px;
+}
+
+.intro p {
+  font-size: 16px;
+}
+
+/* Image with floating animation */
+.intro img {
+  max-height: 350px;
+  border-radius: 10px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  animation: float 3s ease-in-out infinite; /*float effect */
+}
+
+/* Keyframes for image floating animation */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+/* Battery cards container */
+.battery-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 2rem;
+  margin-top: 20px;
+  justify-content: center;
+}
+
+/* Each card */
+.card {
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden; /* Prevent growing beyond */
+  max-height: 100px;
+}
+.card.active {
+  transform: translateY(10px);
+  box-shadow: 0 8px 12px rgba(0,0,0,0.2);
+  max-height: 200px; /* Enough space to reveal description */
+}
+.card:hover {
+  transform: scale(1.05); /* subtle pop effect */
+}
+
+.card h3 {
+  margin-bottom: 0.5rem;
+}
+
+/* Hidden description until active */
+.description {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  margin-top: 0.5rem;
+}
+/* Show description when active */
+.card.active .description {
+opacity: 1;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Footer styling */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #000000;
+  color: white;
+  margin-top: 30px;
+}
+
+/* Responsive grid for cards */
+@media (min-width: 600px) {
+  .battery-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  .battery-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.dark-mode {
+  background-color: #1a1a1a;
+  color: white;
+}
+
+.dark-mode header {
+  background-color: #2a2a2a;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode h1 {
+  color: #b3e5fc;
+}
+
+.dark-mode h1:hover {
+  color: #ffca28;
+}
+
+.dark-mode nav a {
+  color: #b0bec5;
+}
+
+.dark-mode nav a:hover {
+  background-color: #ff9800;
+  color: #212121;
+}
+/* For dark mode compatibility (using your dark-mode class) */
+.dark-mode button {
+  background-color: #42A5F5; /* Lighter blue for dark background */
+}
+
+.dark-mode button:hover {
+  background-color: orange;
+}
+
+.dark-mode .intro p {
+  color: #cfd8dc;
+}
+
+.dark-mode .intro img {
+  box-shadow: 0 6px 16px rgba(255, 255, 255, 0.2);
+}
+
+.dark-mode .card {
+  background-color: #333333;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  color: #1f2325
+}
+
+.dark-mode .card.active {
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4);
+}
+
+.dark-mode .description {
+  color: #1f2325
+}
+
+.dark-mode footer {
+  background: #121212;
+  color: #b0bec5;
+}
