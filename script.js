@@ -15,44 +15,45 @@ const batteries = [
         features: "Used in hybrids, durable"
     },
     {
-        name: " LEAD-Acid",
+        name: "Lead-Acid",
         color: "#f3e5f5",
         features: 'Low cost, bulky, older tech'
     },
     {
         name: "Ultracapacitors",
         color: "#f4f4f4",
-        features: "Very high power density, low energy"
+        features: "Ultracapacitors	Very high power density, low energy"
     },
     {
         name: "Lithium Iron Phosphate",
         color: "#ffe5e0",
         features: "Thermal stability, safe chemistry"
     }
-];
+]
+const container = document.getElementById("battery-container")
+batteries.forEach(battery=>{
+    const card = document.createElement("div")
+    card.className = 'card'
+    card.style.backgroundColor = battery.color
 
-const container = document.getElementById("battery-container");
-batteries.forEach(battery => {
-    const card = document.createElement("div");
-    card.className = 'card';
-    card.style.backgroundColor = battery.color;
+    const title = document.createElement('h3')
+    title.textContent = battery.name
 
-    const title = document.createElement('h3');
-    title.textContent = battery.name;
+    const description = document.createElement("p")
+    description.className = 'description'
+    description.textContent = battery.features
 
-    const description = document.createElement("p");
-    description.className = 'description';
-    description.textContent = battery.features;
+    card.appendChild(title)
+    card.appendChild(description)
+    container.appendChild(card)
+     card.addEventListener("click", () => {
+    card.classList.toggle("active");
+  })
+})
+const toggleBtn = document.getElementById("dark-mode-toggle")
+const body = document.body
 
-    card.appendChild(title);
-    card.appendChild(description);
-    container.appendChild(card);
-
-    card.addEventListener("click", () => {
-        // Close other active cards
-        document.querySelectorAll('.card.active').forEach(c => {
-            if (c !== card) c.classList.remove('active');
-        });
-        card.classList.toggle("active");
-    });
-});
+function toggleDarkMode(){
+    body.classList.toggle("dark-mode")
+}
+toggleBtn.addEventListener('click', toggleDarkMode)
