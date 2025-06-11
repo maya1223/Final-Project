@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EV Battery Explorer - Brands</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="brands.js"></script>
+    <script defer src = 'darkMode.js'></script>
+</head>
+
+<body>
+    <header>
+        <div class="top">
+            <h1>EV Battery Explorer</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i>Home</a></li>
+                    <li><a href="learnmore.html"><i class="fa-solid fa-user-graduate"></i>Learn More</a></li>
+                    <li><a href="brands.html"><i class="fas fa-industry"></i> Brands</a></li>
+                    <li><button id="dark-mode-toggle">Switch Mode</button></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="brands-section">
+            <h2><i class="fa-solid fa-industry"></i> Leading EV Battery Brands</h2>
+            <p>Discover the top companies powering electric vehicles with cutting-edge battery technology.</p>
+            <div class="brand-grid" id="brand-grid">
+                <div class="brand-card" data-battery="Lithium-Ion">
+                    <img src="4edcc1e3706bacdada00d46799fe5738.png" alt="Tesla Logo" class="logo-image">
+                    <h3>Tesla</h3>
+                    <p>Leader in Lithium-Ion batteries for EVs, known for high energy density and Gigafactories.</p>
+                    <button class="details-btn" data-brand-id="0">Explore Details</button>
+                    <div class="details-section">
+                        <ul>
+                            <li><span class="metric-label">Battery Type:</span> <span class="metric-value">Lithium-Ion</span></li>
+                            <li><span class="metric-label">Market Share:</span> <span class="metric-value">20%</span></li>
+                            <li><span class="metric-label">Key Innovation:</span> <span class="metric-value">4680 cell technology for improved range and cost.</span></li>
+                            <li><span class='metric-label'>Company website:</span><span class="metric-value"><a href="https://www.tesla.com/" target="_blank">Go to the website</a></span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="brand-card" data-battery="Lithium-Ion">
+                    <img src="e81402466269f6fbe2b8974b17221607.png" alt="CATL Logo" class="logo-image">
+                    <h3>CATL</h3>
+                    <p>World’s largest EV battery producer, specializing in Lithium-Ion for global markets.</p>
+                    <button class="details-btn" data-brand-id="1">Explore Details</button>
+                    <div class="details-section">
+                        <ul>
+                            <li><span class="metric-label">Battery Type:</span> <span class="metric-value">Lithium-Ion</span></li>
+                            <li><span class="metric-label">Market Share:</span> <span class="metric-value">35%</span></li>
+                            <li><span class="metric-label">Key Innovation:</span> <span class="metric-value">Cell-to-pack design for higher efficiency.</span></li>
+                            <li><span class='metric-label'>Company website:</span><span class="metric-value"><a href="https://www.catl.com/" target="_blank">Go to the website</a></span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="brand-card" data-battery="Lithium-Ion">
+                    <img src="b6d16787ff3845ddec4f7032416dca89.png" alt="LG Chem Logo" class="logo-image">
+                    <h3>LG Chem</h3>
+                    <p>Key supplier of Lithium-Ion batteries, powering many European and US EV brands.</p>
+                    <button class="details-btn" data-brand-id="2">Explore Details</button>
+                    <div class="details-section">
+                        <ul>
+                            <li><span class="metric-label">Battery Type:</span> <span class="metric-value">Lithium-Ion</span></li>
+                            <li><span class="metric-label">Market Share:</span> <span class="metric-value">15%</span></li>
+                            <li><span class="metric-label">Key Innovation:</span> <span class="metric-value">Pouch cells for compact designs.</span></li>
+                            <li><span class='metric-label'>Company website:</span><span class="metric-value"><a href="https://www.lgchem.com/main/index?lang=en_US" target="_blank">Go to the website</a></span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="brand-card" data-battery="Lithium-Ion">
+                    <img src="f05f8eabd972357fc1b6112ede43bf35.png" alt="Panasonic Logo" class="logo-image">
+                    <h3>Panasonic</h3>
+                    <p>Long-time Tesla partner, focusing on high-performance Lithium-Ion cells.</p>
+                    <button class="details-btn" data-brand-id="3">Explore Details</button>
+                    <div class="details-section">
+                        <ul>
+                            <li><span class="metric-label">Battery Type:</span> <span class="metric-value">Lithium-Ion</span></li>
+                            <li><span class="metric-label">Market Share:</span> <span class="metric-value">10%</span></li>
+                            <li><span class="metric-label">Key Innovation:</span> <span class="metric-value">Cylindrical cells with high reliability.</span></li>
+                            <li><span class='metric-label'>Company website:</span><span class="metric-value"><a href="https://na.panasonic.ca/industries/automotive/ev-battery" target="_blank">Go to the website</a></span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="brand-card" data-battery="Lithium-Iron-Phosphate">
+                    <img src="490d908be2b7db5fad0b8f72f73c875f.png" alt="BYD Logo" class="logo-image">
+                    <h3>BYD</h3>
+                    <p>Chinese EV leader with Lithium Iron Phosphate batteries for safety and longevity.</p>
+                    <button class="details-btn" data-brand-id="4">Explore Details</button>
+                    <div class="details-section">
+                        <ul>
+                            <li><span class="metric-label">Battery Type:</span> <span class="metric-value">Lithium Iron Phosphate</span></li>
+                            <li><span class="metric-label">Market Share:</span> <span class="metric-value">12%</span></li>
+                            <li><span class="metric-label">Key Innovation:</span> <span class="metric-value">Blade battery for enhanced safety.</span></li>
+                            <li><span class='metric-label'>Company website:</span><span class="metric-value"><a href="https://www.byd.com/eu/technology/byd-blade-battery" target="_blank">Go to the website</a></span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="brand-card" data-battery="Solid-State">
+                    <img src="images.png" alt="QuantumScape Logo" class="logo-image">
+                    <h3>QuantumScape</h3>
+                    <p>Pioneering Solid-State batteries for next-gen EVs with higher energy density.</p>
+                    <button class="details-btn" data-brand-id="5">Explore Details</button>
+                    <div class="details-section">
+                        <ul>
+                            <li><span class="metric-label">Battery Type:</span> <span class="metric-value">Solid-State</span></li>
+                            <li><span class="metric-label">Market Share:</span> <span class="metric-value">2%</span></li>
+                            <li><span class="metric-label">Key Innovation:</span> <span class="metric-value">Solid-state electrolyte for faster charging.</span></li>
+                            <li><span class='metric-label'>Company website:</span><span class="metric-value"><a href="https://www.quantumscape.com/" target="_blank">Go to the website</a></span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>© 2025 EV Battery Explorer</p>
+    </footer>
+</body>
+</html>
