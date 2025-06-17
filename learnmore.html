@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Learn More - EV Battery Explorer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="darkMode.js"></script>
+  <script defer src="comparison.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="top">
+      <h1><i class="fas fa-car-battery"></i> EV Battery Explorer</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+          <li><a href="learnmore.html"><i class="fa-solid fa-user-graduate"></i> Learn More</a></li>
+          <li><a href="brands.html"><i class="fas fa-industry"></i> Brands</a></li>
+          <li><button id="dark-mode-toggle">Switch Mode</button></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main style="padding: 2rem;">
+    <h2 style="margin-bottom: 1rem;"><i class="fa-solid fa-tv"></i> Educational Videos on EV Batteries</h2>
+    <p>Watch these curated videos to deepen your understanding of electric vehicle battery technologies:</p>
+    <div class="filter-container" style="justify-content: left;">
+    <label for="battery-filter">Filter by Battery Type:</label>
+    <select id="battery-filter">
+        <option value="all">All</option>
+        <option value="Lithium-Ion">Lithium-Ion</option>
+        <option value="Solid-State">Solid-State</option>
+        <option value="Nickel-Metal Hydride">Nickel-Metal Hydride</option>
+        <option value="Lead-Acid">Lead-Acid</option>
+        <option value="Ultracapacitors">Ultracapacitors</option>
+        <option value="Lithium Iron Phosphate">Lithium Iron Phosphate</option>
+    </select>
+    </div>
+    <div class="video-grid">
+      <div class="video-card" data-battery="Lithium-Ion">
+        <p><strong>How a Lithium Ion Battery Actually Works</strong></p>
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/4-1psMHSpKs?si=QJ3UhX7ylsutw5Aq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <button class="watch-toggle">Mark as Watched</button>
+      </div>
+
+      <div class="video-card" data-battery='Solid-State'>
+        <p><strong>How a Solid State Battery Actually Works</strong></p>
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/NLRidHrwVCw?si=UtI4lo-wJlfHu0u7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <button class="watch-toggle">Mark as Watched</button>
+      </div>
+
+      <div class="video-card" data-battery="Nickel-Metal Hydride">
+        <p><strong>How a Nickel Metal Hydride Battery Actually Works</strong></p>
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/BkBuDbfuhxM?si=VK_glCd8bojeWTKg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <button class="watch-toggle">Mark as Watched</button>
+      </div>
+      <div class="video-card" data-battery="Lead-Acid">
+        <p><strong>How Lead Acid Battery Actually Works</strong></p>
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/SPeEDP6rzu8?si=1LT6qrm5yhCSShaP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <button class="watch-toggle">Mark as Watched</button>
+      </div>
+      <div class="video-card" data-battery="Ultracapacitors">
+        <p><strong>How Ultracapacitors Actually Work</strong></p>
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/WUZqgAtKMJg?si=nRAWhzwINK9RS03E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <button class="watch-toggle">Mark as Watched</button>
+      </div>
+      <div class="video-card" data-battery="Lithium Iron Phosphate">
+        <p><strong>How Lithium Iron Phosphate Battery Actually Work</strong></p>
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/Eqm8OVCwMrg?si=B3htim9INMUIiDoI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <button class="watch-toggle">Mark as Watched</button>
+      </div>
+    </div>
+    <section style="margin-top: 30px">
+    <h2>Compare Battery Types</h2>
+    <p>Select two battery types to compare their key metrics:</p>
+    <div class="comparison-container">
+        <div class="comparison-select">
+            <label for="battery1">Battery 1:</label>
+            <select id="battery1">
+                <option value="Lithium-Ion">Lithium-Ion</option>
+                <option value="Solid-State">Solid-State</option>
+                <option value="Nickel-Metal Hydride">Nickel-Metal Hydride</option>
+                <option value="Lead-Acid">Lead-Acid</option>
+                <option value="Ultracapacitors">Ultracapacitors</option>
+                <option value="Lithium Iron Phosphate">Lithium Iron Phosphate</option>
+            </select>
+        </div>
+        <div class="comparison-select">
+            <label for="battery2">Battery 2:</label>
+            <select id="battery2">
+                <option value="Solid-State">Solid-State</option>
+                <option value="Lithium-Ion">Lithium-Ion</option>
+                <option value="Nickel-Metal Hydride">Nickel-Metal Hydride</option>
+                <option value="Lead-Acid">Lead-Acid</option>
+                <option value="Ultracapacitors">Ultracapacitors</option>
+                <option value="Lithium Iron Phosphate">Lithium Iron Phosphate</option>
+            </select>
+        </div>
+    </div>
+    <div id="comparison-result" class="comparison-result"></div>
+</section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 EV Battery Explorer</p>
+  </footer>
+</body>
+</html>
